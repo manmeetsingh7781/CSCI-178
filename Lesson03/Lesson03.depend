@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1707181495 source:c:\users\manme\desktop\178 - game development\lesson03\main.cpp
+	<windows.h>
+	<iostream>
+	<GLScene.h>
+	<GLLight.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<windows.h>
+
+1707179990 c:\users\manme\desktop\178 - game development\lesson03\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1707178716 c:\users\manme\desktop\178 - game development\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707182715 c:\users\manme\desktop\178 - game development\lesson03\include\gllight.h
+	<GLScene.h>
+
+1707354092 source:c:\users\manme\desktop\178 - game development\lesson03\src\gllight.cpp
+	"GLLight.h"
+
+1707182766 source:c:\users\manme\desktop\178 - game development\lesson03\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+
+1707353493 source:c:\users\manme\desktop\178 - game development\lesson03\src\gltexture.cpp
+	"GLTexture.h"
+
+1707352749 c:\users\manme\desktop\178 - game development\lesson03\include\gltexture.h
+	<SOIL.h>
+	<GL/gl.h>
+	<iostream>
+
+1707181627 c:\users\manme\desktop\178 - game development\common\include\soil.h
+
