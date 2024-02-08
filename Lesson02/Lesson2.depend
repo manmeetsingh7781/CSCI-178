@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1707181495 source:c:\users\manme\desktop\178 - game development\lesson2\main.cpp
+	<windows.h>
+	<iostream>
+	<GLScene.h>
+	<GLLight.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<windows.h>
+
+1707179990 c:\users\manme\desktop\178 - game development\lesson2\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1707178716 c:\users\manme\desktop\178 - game development\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707182715 c:\users\manme\desktop\178 - game development\lesson2\include\gllight.h
+	<GLScene.h>
+
+1707182766 source:c:\users\manme\desktop\178 - game development\lesson2\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+
