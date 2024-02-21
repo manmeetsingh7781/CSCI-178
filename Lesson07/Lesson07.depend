@@ -1,0 +1,117 @@
+# depslib dependency file v1.0
+1707787088 source:c:\users\manme\desktop\178 - game development\lesson07\main.cpp
+	<windows.h>
+	<iostream>
+	<GLScene.h>
+	<GLLight.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<windows.h>
+
+1707959697 c:\users\manme\desktop\178 - game development\lesson07\include\glscene.h
+	"common.h"
+
+1707178716 c:\users\manme\desktop\178 - game development\common\include\gl\glut.h
+	<windows.h>
+	<stdlib.h>
+	<GL/gl.h>
+	<GL/glu.h>
+
+1707182715 c:\users\manme\desktop\178 - game development\lesson07\include\gllight.h
+	<GLScene.h>
+
+1707354092 source:c:\users\manme\desktop\178 - game development\lesson07\src\gllight.cpp
+	"GLLight.h"
+
+1707787341 source:c:\users\manme\desktop\178 - game development\lesson07\src\glmodel.cpp
+	"GLModel.h"
+
+1707959767 c:\users\manme\desktop\178 - game development\lesson07\include\glmodel.h
+	"common.h"
+
+1707353493 source:c:\users\manme\desktop\178 - game development\lesson07\src\gltexture.cpp
+	"GLTexture.h"
+
+1707959813 c:\users\manme\desktop\178 - game development\lesson07\include\gltexture.h
+	"common.h"
+
+1707181627 c:\users\manme\desktop\178 - game development\common\include\soil.h
+
+1707958867 source:c:\users\manme\desktop\178 - game development\lesson07\src\glinputs.cpp
+	"GLInputs.h"
+
+1707959667 c:\users\manme\desktop\178 - game development\lesson07\include\glinputs.h
+	"GLModel.h"
+	"common.h"
+
+1707958581 source:c:\users\manme\desktop\178 - game development\lesson07\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+
+1707787088 source:c:\users\manme\desktop\178 - game development\lesson06\main.cpp
+	<windows.h>
+	<iostream>
+	<GLScene.h>
+	<GLLight.h>
+	<GL/glut.h>
+	<stdlib.h>
+	<windows.h>
+
+1707786722 c:\users\manme\desktop\178 - game development\lesson06\include\glscene.h
+	<windows.h>
+	<GL/glut.h>
+	<iostream>
+
+1707182715 c:\users\manme\desktop\178 - game development\lesson06\include\gllight.h
+	<GLScene.h>
+
+1707958440 source:c:\users\manme\desktop\178 - game development\lesson06\src\glinputs.cpp
+	"GLInputs.h"
+
+1707956808 c:\users\manme\desktop\178 - game development\lesson06\include\glinputs.h
+	"GLModel.h"
+	<windows.h>
+
+1707958760 c:\users\manme\desktop\178 - game development\lesson06\include\glmodel.h
+	<windows.h>
+	<gl/gl.h>
+	<gl/Glut.h>
+
+1707354092 source:c:\users\manme\desktop\178 - game development\lesson06\src\gllight.cpp
+	"GLLight.h"
+
+1707787341 source:c:\users\manme\desktop\178 - game development\lesson06\src\glmodel.cpp
+	"GLModel.h"
+
+1707958581 source:c:\users\manme\desktop\178 - game development\lesson06\src\glscene.cpp
+	"GLScene.h"
+	"GLLight.h"
+	"GLTexture.h"
+	"GLModel.h"
+	"GLInputs.h"
+
+1707352749 c:\users\manme\desktop\178 - game development\lesson06\include\gltexture.h
+	<SOIL.h>
+	<GL/gl.h>
+	<iostream>
+
+1707353493 source:c:\users\manme\desktop\178 - game development\lesson06\src\gltexture.cpp
+	"GLTexture.h"
+
+1707959248 source:c:\users\manme\desktop\178 - game development\lesson07\src\glparallax.cpp
+	"GLParallax.h"
+
+1707959737 c:\users\manme\desktop\178 - game development\lesson07\include\glparallax.h
+	"common.h"
+
+1707959828 c:\users\manme\desktop\178 - game development\lesson07\include\common.h
+	<windows.h>
+	<iostream>
+	<gl/gl.h>
+	<gl/Glut.h>
+	<SOIL.h>
+	<iostream>
+
