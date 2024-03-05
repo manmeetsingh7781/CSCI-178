@@ -6,14 +6,12 @@
 #include<GLParallax.h>
 #include <GLPlayer.h>
 
-GLTexture *teapotTex = new GLTexture();  // texture object
-GLModel *teaPotModel = new GLModel();    // model object
 GLInputs *KbMs       = new GLInputs();   // keyboard and Mouse
-GLParallax *plx      = new GLParallax(); // parallax
 
-GLParallax *plx1      = new GLParallax(); // parallax
+// background
+GLParallax *backgroundImage      = new GLParallax(); // parallax
 
-GLPlayer *pl = new GLPlayer();
+
 
 GLScene::GLScene()
 {
@@ -43,11 +41,14 @@ GLint GLScene::initGL()
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     glEnable(GL_TEXTURE_2D);  //enable textures
-    teapotTex->loadTexture("images/teapot.jpg");//load texture
-    plx->parallaxInit("images/background.jpeg");
-   // plx1->parallaxInit("images/plx.png");
-    pl->initPlayer(5, 2, "images/player.png");
-    pl->actionTrigger = pl->WALK;
+
+    // init objects here
+
+
+    // init background image
+    backgroundImage->parallaxInit("images/background.png");
+
+
     return true;
 }
 
@@ -63,33 +64,16 @@ GLint GLScene::drawScene()    // this function runs on a loop
     glScaled(3.33,3.33,1.0);
     glDisable(GL_LIGHTING);
 
-    plx->parallaxDraw(screenWidth,screenHeight);   // draw model obj
-//    plx1->parallaxDraw(screenWidth,screenHeight);   // draw model obj
+    // objects that need to update
 
-
-    //  plx->parallaxScroll(true,"left", 0.01);      // parallax Auto mode
-    glEnable(GL_LIGHTING);
-    glPopMatrix();
-
-    glPushMatrix();
-    glDisable(GL_LIGHTING);
-    pl->drawPlayer();
-    pl->actions();
-    glPopMatrix();
-
-    glEnable(GL_LIGHTING);
-    glPushMatrix();
-    teapotTex->bindTexture();   //activate texture handler
-    glPushMatrix();             //group object
-    teaPotModel->drawModel();   // draw model obj
-    glPopMatrix();              // exit group
+    // update background
+    backgroundImage->parallaxDraw(screenWidth,screenHeight);
 
 
     return true;
 }
 
-GLvoid GLScene::resizeScene(GLsizei width, GLsizei height)
-{
+GLvoid GLScene::resizeScene(GLsizei width, GLsizei height){
     GLfloat aspectRatio = (GLfloat)width/(GLfloat)height; // keep track of the ratio
     glViewport(0,0,width,height); // adjusting the viewport
     glMatrixMode(GL_PROJECTION);
@@ -99,15 +83,14 @@ GLvoid GLScene::resizeScene(GLsizei width, GLsizei height)
     glLoadIdentity();
 }
 
+// key mapping - Controller
 int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
     switch(uMsg)   // check for inputs
     {
     case WM_KEYDOWN:
          KbMs->wParam = wParam;
-         KbMs->keyPress(teaPotModel);
-         KbMs->keyBackground(plx,0.005);
-         KbMs->keyBackground(plx1,0.001);
+         KbMs->keyBackground(backgroundImage,0.005);
          break;
 
     case WM_KEYUP:
@@ -117,12 +100,12 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     case WM_LBUTTONDOWN:
          KbMs->wParam = wParam;
-         KbMs->mouseEventDown(teaPotModel,LOWORD(lParam),HIWORD(lParam));
+         // KbMs->mouseEventDown(teaPotModel,LOWORD(lParam),HIWORD(lParam));
          break;
 
     case WM_RBUTTONDOWN:
          KbMs->wParam = wParam;
-         KbMs->mouseEventDown(teaPotModel,LOWORD(lParam),HIWORD(lParam));
+         // KbMs->mouseEventDown(teaPotModel,LOWORD(lParam),HIWORD(lParam));
          break;
 
     case WM_LBUTTONUP:
@@ -133,11 +116,10 @@ int GLScene::windMsg(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 
     case WM_MOUSEMOVE:
         KbMs->wParam = wParam;
-        KbMs->mouseMove(teaPotModel,LOWORD(lParam),HIWORD(lParam));
+       //  KbMs->mouseMove(teaPotModel,LOWORD(lParam),HIWORD(lParam));
          break;
     case WM_MOUSEWHEEL:
-
-        KbMs->mouseWheel(teaPotModel, (double)GET_WHEEL_DELTA_WPARAM(wParam));
+        //KbMs->mouseWheel(teaPotModel, (double)GET_WHEEL_DELTA_WPARAM(wParam));
        break;
     }
 }
